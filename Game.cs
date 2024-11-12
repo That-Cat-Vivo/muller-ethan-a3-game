@@ -11,17 +11,20 @@ namespace Game10003
     public class Game
     {
         // Place your variables here:
-        float Gravity = 0;
-        float playPositionX = 400;
-        float playPositionY = 400;
+        
+        Fruit orange = new Fruit();
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
         /// </summary>
         public void Setup()
         {
-            Window.SetSize(800, 800);
+            Window.SetSize(800, 600);
             Window.SetTitle("Monkey Jump");
+
+            
+
+            orange.Setup();
         }
 
         /// <summary>
@@ -30,14 +33,25 @@ namespace Game10003
         public void Update()
         {
             Window.ClearBackground(Color.White);
+            orange.Update();
+
+
+            
+            
 
             //Player Object
-            Draw.FillColor = Color.LightGray;
-            Draw.Rectangle(playPositionX, playPositionY, 40, 80);
+
+            //Draw.FillColor = Color.LightGray;
+            //Draw.Rectangle(playPosition, playSize);
 
             //Temp Collision Platform
-            Draw.FillColor = Color.DarkGray;
-            Draw.Rectangle(20, 750, 760, 20);
+            //Draw.FillColor = Color.DarkGray;//
+            // Draw.Rectangle(20, 750, 760, 20);/
+
+            //Fruit
+
+            
+
 
         }
     }

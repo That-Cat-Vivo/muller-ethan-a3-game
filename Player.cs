@@ -1,12 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace muller_ethan_a3_game
+namespace Game10003
 {
-    internal class Player
+    public class Player
     {
+        public Vector2 playPosition;
+        private Vector2 playSize;
+        private Vector2 playVelocity;
+        private Vector2 playGravity = new Vector2(0, +20);
+
+        public Player() 
+        { 
+        
+        
+        
+        }
     }
 }
