@@ -11,8 +11,10 @@ namespace Game10003
     public class Game
     {
         // Place your variables here:
+        Player Monkey = new Player();
+        Fruit[] Apples = new Fruit[5];
+        Platform[] Bird = new Platform[6];
         
-        Fruit orange = new Fruit();
 
         /// <summary>
         ///     Setup runs once before the game loop begins.
@@ -22,9 +24,19 @@ namespace Game10003
             Window.SetSize(800, 600);
             Window.SetTitle("Monkey Jump");
 
-            
+            //Player 
+            new Player();
+            //Birds
+            for (int b = 0; b < Bird.Length; b++)
+            {
+                Bird[b] = new Platform();
+            }
+            //Fruit
+            for (int a = 0; a < Apples.Length; a++)
+            {
+                Apples[a] = new Fruit();
+            }
 
-            orange.Setup();
         }
 
         /// <summary>
@@ -33,9 +45,16 @@ namespace Game10003
         public void Update()
         {
             Window.ClearBackground(Color.White);
-            orange.Update();
-
-
+            foreach (Platform Bird in Bird)
+            {
+                Bird.Update();
+            }
+            foreach (Fruit Apples in Apples)
+            {
+                Apples.Update();
+            }
+            
+            Monkey.Update();
             
             
 

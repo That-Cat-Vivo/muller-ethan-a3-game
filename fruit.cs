@@ -11,7 +11,7 @@ namespace Game10003
     {
         private Vector2 fruitPosition;
         private Vector2 velocity;
-        private Vector2 gravity = new Vector2(0, +30);
+        private Vector2 gravity = new Vector2(0, +5);
 
         public void Setup()
         {
@@ -21,11 +21,11 @@ namespace Game10003
         public void Update()
         {
             Draw.FillColor = Color.Red;
-            Draw.Circle(fruitPosition, 20);
+            Draw.Circle(fruitPosition, 10);
             //gravity
             Vector2 gravForce = gravity * Time.DeltaTime;
             velocity += gravForce;
-            fruitPosition += gravForce;
+            fruitPosition += velocity;
         }
     }
 }
