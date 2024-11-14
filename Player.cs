@@ -14,9 +14,14 @@ namespace Game10003
         private Vector2 playGravity = new Vector2(0, +30);
         bool IsCollidingWithPlatform;
 
+
+
+        public Player()
+        {
+            Setup();
+        }
         public void Setup()
         {
-           
             
          
         }
@@ -24,7 +29,6 @@ namespace Game10003
         {
             Draw.FillColor = Color.LightGray;
             Draw.Square(playPosition, 40);
-
 
             //If Else Statement used to prevent collision contradicting normal movement path.
             if (IsCollidingWithPlatform)

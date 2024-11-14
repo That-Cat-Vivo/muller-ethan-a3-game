@@ -13,6 +13,11 @@ namespace Game10003
         private Vector2 velocity;
         private Vector2 gravity = new Vector2(0, +5);
 
+        public Fruit()
+        {
+            Setup();
+        }
+
         public void Setup()
         {
             fruitPosition.X = Random.Float(10, 790);
@@ -22,6 +27,7 @@ namespace Game10003
         {
             Draw.FillColor = Color.Red;
             Draw.Circle(fruitPosition, 10);
+
             //gravity
             Vector2 gravForce = gravity * Time.DeltaTime;
             velocity += gravForce;

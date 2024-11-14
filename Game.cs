@@ -24,8 +24,6 @@ namespace Game10003
             Window.SetSize(800, 600);
             Window.SetTitle("Monkey Jump");
 
-            //Player 
-            new Player();
             //Birds
             for (int b = 0; b < Bird.Length; b++)
             {
@@ -36,7 +34,7 @@ namespace Game10003
             {
                 Apples[a] = new Fruit();
             }
-
+            
         }
 
         /// <summary>
